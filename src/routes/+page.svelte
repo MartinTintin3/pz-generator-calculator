@@ -5,7 +5,7 @@
 	let generator_fuel_percentage = 0;
 	let generator_power_consumption = 0;
 
-	$: in_game_hours_left = generator_power_consumption > 0 ? generator_max_fuel * (generator_fuel_percentage / 100) / generator_power_consumption : Infinity;
+	$: in_game_hours_left = generator_power_consumption > 0 ? generator_fuel_percentage / generator_power_consumption : Infinity;
 	$: real_life_hours_left = in_game_hours_left / game_to_real_time_ratio;
 </script>
 
