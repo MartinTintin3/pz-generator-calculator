@@ -22,7 +22,7 @@
 
 <p>In-Game Time Left ({in_game_hours_left.toFixed(2)} total hours): <span class="time-indicator">{Math.floor(in_game_hours_left / 24)}</span> days, <span class="time-indicator">{Math.floor(in_game_hours_left % 24)}</span> hours, <span class="time-indicator">{Math.floor((in_game_hours_left % 1) * 60)}</span> minutes</p>
 
-<p>Real-Life Time Left ({real_life_hours_left.toFixed(1)} total minutes): <span class="time-indicator">{Math.floor(real_life_hours_left / 24)}</span> days, <span class="time-indicator">{Math.floor(real_life_hours_left % 24)}</span> hours, <span class="time-indicator">{Math.floor((real_life_hours_left % 1) * 60)}</span> minutes</p>
+<p>Real-Life Time Left ({real_life_hours_left.toFixed(2)} total hours): <span class="time-indicator">{Math.floor(real_life_hours_left / 24)}</span> days, <span class="time-indicator">{Math.floor(real_life_hours_left % 24)}</span> hours, <span class="time-indicator">{Math.floor((real_life_hours_left % 1) * 60)}</span> minutes</p>
 
 <style>
 	* {
