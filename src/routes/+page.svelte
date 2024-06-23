@@ -17,7 +17,7 @@
 
 <div>
 	<label for="generator-power-consumption">Generator Power Consumption (L/h): </label>
-	<input id="generator-power-consumption" type="number" min="0" bind:value={generator_power_consumption}>
+	<input id="generator-power-consumption" type="number" min="0" step="0.01" bind:value={generator_power_consumption}>
 </div>
 
 <p>In-Game Time Left ({in_game_hours_left.toFixed(2)} total hours): <span class="time-indicator">{Math.floor(in_game_hours_left / 24)}</span> days, <span class="time-indicator">{Math.floor(in_game_hours_left % 24)}</span> hours, <span class="time-indicator">{Math.floor((in_game_hours_left % 1) * 60)}</span> minutes</p>
