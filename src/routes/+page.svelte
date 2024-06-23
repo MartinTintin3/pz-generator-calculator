@@ -1,6 +1,6 @@
 <script>
 	let generator_max_fuel = 10; // Liters
-	let game_to_real_time_ratio = 10; // 10 in-game minutes per 1 real-life minute
+	let game_to_real_time_ratio = 24; // 10 in-game minutes per 1 real-life minute
 
 	let generator_fuel_percentage = 0;
 	let generator_power_consumption = 0;
@@ -20,9 +20,9 @@
 	<input id="generator-power-consumption" type="number" min="0" bind:value={generator_power_consumption}>
 </div>
 
-<p>In-Game Time Left: <span class="time-indicator">{Math.floor(in_game_hours_left / 24)}</span> days, <span class="time-indicator">{Math.floor(in_game_hours_left % 24)}</span> hours, <span class="time-indicator">{Math.floor((in_game_hours_left % 1) * 60)}</span> minutes</p>
+<p>In-Game Time Left ({in_game_hours_left} total hours): <span class="time-indicator">{Math.floor(in_game_hours_left / 24)}</span> days, <span class="time-indicator">{Math.floor(in_game_hours_left % 24)}</span> hours, <span class="time-indicator">{Math.floor((in_game_hours_left % 1) * 60)}</span> minutes</p>
 
-<p>Real-Life Time Left: <span class="time-indicator">{Math.floor(real_life_hours_left / 24)}</span> days, <span class="time-indicator">{Math.floor(real_life_hours_left % 24)}</span> hours, <span class="time-indicator">{Math.floor((real_life_hours_left % 1) * 60)}</span> minutes</p>
+<p>Real-Life Time Left ({real_life_hours_left} total minutes): <span class="time-indicator">{Math.floor(real_life_hours_left / 24)}</span> days, <span class="time-indicator">{Math.floor(real_life_hours_left % 24)}</span> hours, <span class="time-indicator">{Math.floor((real_life_hours_left % 1) * 60)}</span> minutes</p>
 
 <style>
 	* {
